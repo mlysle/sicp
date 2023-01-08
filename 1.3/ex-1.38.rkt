@@ -1,6 +1,6 @@
 #lang sicp
 
-; compute a k-term finite continued fraction
+; compute a k-term finite continuous fraction
 
 (define (cont-frac n d k)
   (define (try i)
@@ -9,7 +9,7 @@
         (/ (n i) (+ (d i) (try (inc i))))))
   (try 1))
 
-; it takes k=11 to compute the inverse of the golden ratio correct to 4 decimal places
+; calculate e as a k-term finite continuous fraction
 (define e (+ 2
              (cont-frac (lambda (i) 1.0)
                         (lambda (i)
