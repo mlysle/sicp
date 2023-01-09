@@ -21,3 +21,5 @@
 (define (smooth-repeated f n)
   ((repeated smooth n) f))
 
+
+((smooth-repeated square 2) 5)
