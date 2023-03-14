@@ -1,8 +1,5 @@
 #lang simply-scheme
 
-; 1. See ../1.1/ex-1.6.rkt
-
-; 2.
 (define (square x) (* x x))
 
 (define (squares numbersentence)
