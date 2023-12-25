@@ -10,6 +10,7 @@ Computer Programs](http://mitpress.mit.edu/sites/default/files/sicp/index.html)*
 
 ## Course Materials
 
+- [Lectures](https://archive.org/details/ucberkeley-webcast-PL3E89002AA9B9879E?sort=-week)
 - Will update later
 
 ## My setup
@@ -20,15 +21,16 @@ Computer Programs](http://mitpress.mit.edu/sites/default/files/sicp/index.html)*
 ## Functional Programming
 
 - [x] Reading (SICP Section 1.1)
-- [x] (https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8)[Lecture 1]
-- [x] (https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8)[Lecture 2]
-- [x] (./CS61A/week1/)[Homework]
+- [x] [Lecture 1](https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8)
+- [x] [Lecture 2](https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8)
+- [x] [Homework](./CS61A/week1/)
 
 ## Higher-order procedures
 
-- [x] Reading (SICP Section 1.3) [x] Video lecture 3
+- [x] Reading (SICP Section 1.3)
+- [x] Video lecture 3
 - [x] Video lecture 4
-- [x] (./CS61A/week2/)[Homework]
+- [x] [Homework](./CS61A/week2/)
 - [x] Video lecture 5
 - [x] Video lecture 6
 
@@ -37,7 +39,7 @@ Computer Programs](http://mitpress.mit.edu/sites/default/files/sicp/index.html)*
 - [x] Reading (SICP Section 1.2.1 - 1.2.4)
 - [x] Video lecture 7
 - [x] Video lecture 8
-- [x] (./CS61A/week3/)[Homework]
+- [x] [Homework](./CS61A/week3/)
 
 ## Project 1 - Twenty-One
 
