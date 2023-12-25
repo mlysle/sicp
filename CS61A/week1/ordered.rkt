@@ -6,7 +6,7 @@
     (ascending? numbers)))
 
 (define (ascending? numbers)
-  (cond ((empty? (butfirst numbers)) #t)
+  (cond ((empty? (butfirst numbers)) #t) ; a sentence of one number is always ordered
         ((< (first numbers) (first (butfirst numbers))) (ascending? (butfirst numbers)))
         (else #f)))
 
