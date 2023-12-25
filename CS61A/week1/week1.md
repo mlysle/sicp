@@ -17,9 +17,9 @@ Will fill out later.
 ### Plurals
 
 > See `plural.rkt`:
-
-```scheme
-; check if last letter is y and the preceding letter is not a vowel (i.e. a consonant)
+>
+> ```scheme
+> ; check if last letter is y and the preceding letter is not a vowel (i.e. a consonant)
 > (define (uses-ies-ending? wd)
 > (and (equal? (last wd) 'y)
 > (not (member? (last (butlast wd))
@@ -29,13 +29,13 @@ Will fill out later.
 > (if (uses-ies-ending? wd)
 > (word (butlast wd) 'ies)
 > (word wd 's)))
-```
+> ```
 
 ### Sum of Larger Squares
 
 > See `ex-1.3.rkt`:
-
-```scheme
+>
+> ```scheme
 > (define (square a) (* a a))
 >
 > (define (sum_of_squares a b) (+ (square a) (square b)))
@@ -44,13 +44,13 @@ Will fill out later.
 >   (cond ((and (> x z) (> y z)) (sum_of_squares x y))
 >        ((and (> x y) (> z y)) (sum_of_squares x z))
 >        (else (sum_of_squares y z))))
-```
+> ```
 
 ### Removing Duplicates
 
 > See `dupls-removed.rkt`:
-
-```scheme
+>
+> ```scheme
 > (define (dupl-word words)
 >   (if (member? (first words) (butfirst words))
 >       '()
@@ -60,4 +60,4 @@ Will fill out later.
 >   (if (empty? words)
 >     '()
 >     (sentence (dupl-word words) (dupls-removed (butfirst words)))))
-```
+> ```
