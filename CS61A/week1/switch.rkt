@@ -1,4 +1,6 @@
-#lang simply-scheme
+#lang racket
+(require berkeley)
+
 ; handles the sentence after the first word
 (define (switch switchme)
   (define (substitute nextword) 

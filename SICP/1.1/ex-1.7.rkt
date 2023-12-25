@@ -1,4 +1,5 @@
-#lang sicp
+#lang racket
+(require berkeley)
 
 (define (square x)
   (* x x))

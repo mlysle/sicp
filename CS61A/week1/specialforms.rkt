@@ -1,4 +1,5 @@
-#lang simply-scheme
+#lang racket
+(require berkeley)
 
 (define (infinite_loop) (infinite_loop))
 (define x 0)

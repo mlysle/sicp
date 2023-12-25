@@ -1,4 +1,5 @@
-#lang simply-scheme
+#lang racket
+(require berkeley)
 
 (define (ordered? numbers)
   (if (empty? numbers) '(A sentence of numbers is required.)

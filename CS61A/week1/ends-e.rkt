@@ -1,4 +1,5 @@
-#lang simply-scheme
+#lang racket
+(require berkeley)
 
 (define (ends-e words)
   (cond ((empty? words) '())

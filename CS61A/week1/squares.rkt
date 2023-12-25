@@ -1,4 +1,5 @@
-#lang simply-scheme
+#lang racket
+(require berkeley)
 
 (define (square x) (* x x))
 
