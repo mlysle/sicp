@@ -1,7 +1,8 @@
 # CS61A & SICP
 
-This file contains my solutions to problems from UC Berkeley's CS61A. I have also gone ahead and solve many unassigned problems from the textbook, **[Structure and Interpretation of
+This project contains my solutions to problems from UC Berkeley's CS61A. I have also gone ahead and solve many unassigned problems from the textbook, **[Structure and Interpretation of
 Computer Programs](http://mitpress.mit.edu/sites/default/files/sicp/index.html)**. I started working on this course in late 2022/early 2023 before taking a break to focus on my formal education. I am now returning to finish what I started.
+This repository is modeled on a similar attempt found [here](https://github.com/zackads/sicp).
 
 ## Structure
 
@@ -11,6 +12,7 @@ Computer Programs](http://mitpress.mit.edu/sites/default/files/sicp/index.html)*
 ## Course Materials
 
 - [Lectures](https://archive.org/details/ucberkeley-webcast-PL3E89002AA9B9879E?sort=-week)
+- [Course Archive](https://github.com/theurere/berkeley_cs61a_spring-2011_archive)
 - Will update later
 
 ## My setup
@@ -23,7 +25,7 @@ Computer Programs](http://mitpress.mit.edu/sites/default/files/sicp/index.html)*
 - [x] Reading (SICP Section 1.1)
 - [x] [Lecture 1](https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8)
 - [x] [Lecture 2](https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8)
-- [x] [Homework](./CS61A/week1/)
+- [x] [Homework/Lab](./CS61A/week1/)
 
 ## Higher-order procedures
 
@@ -31,8 +33,11 @@ Computer Programs](http://mitpress.mit.edu/sites/default/files/sicp/index.html)*
 - [x] Video lecture 3
 - [x] Video lecture 4
 - [x] [Homework](./CS61A/week2/)
-- [x] Video lecture 5
-- [x] Video lecture 6
+- [x] [Lecture 3]()
+- [x] [Lecture 4]()
+
+- [ ] [Lecture 5]()
+- [ ] [Lecture 6]()
 
 ## Recursion and iteration
 
