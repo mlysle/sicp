@@ -2,11 +2,6 @@
 
 (define (identity x) x)
 (define (inc x) (+ 1 x))
-(define (sum term a next b)
-  (if (> a b)
-      0
-      (+ (term a)
-         (sum term (next a) next b))))
 
 (define (product term a next b)
   (if (> a b)
