@@ -13,14 +13,12 @@
 
 ; calculate tan(x) as a k-term finite continuous fraction
 (define (tan-cf x k)
-  (/ x
-     (+ 1
-        (cont-frac (lambda (i)
-                     (- (* x x)))
-                   (lambda (i)
-                     (+ 1 (* 2 i)))
-                   k))))
-
-
-(tan-cf 1.0 10)
+     (cont-frac (lambda (i)
+                  (if (equal? i 1)
+                     x 
+                     (- (* x x))))
+                (lambda (i)
+                  (- (* 2 i) 1))
+                k))
+(tan-cf 1.0 100)
 (tan 1.0)
