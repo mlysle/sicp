@@ -1,7 +1,6 @@
 #lang sicp
 
 ; compute a k-term finite continuous fraction
-
 (define (cont-frac n d k)
   (define (try i)
     (if (= i k)
@@ -17,4 +16,3 @@
                               i
                               1)) 100)))
 e
-
