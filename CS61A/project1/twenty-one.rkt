@@ -6,8 +6,7 @@
     (cond ((> (best-total dealer-hand-so-far) 21) 1)
           ((< (best-total dealer-hand-so-far) 17)
            (play-dealer customer-hand
-                        (se dealer-hand-so-far (first rest-of-deck))
-                        (bf rest-of-deck)))
+                        (se dealer-hand-so-far (first rest-of-deck)) (bf rest-of-deck)))
           ((< (best-total customer-hand) (best-total dealer-hand-so-far)) -1)
           ((= (best-total customer-hand) (best-total dealer-hand-so-far)) 0)
           (else 1)))
@@ -68,21 +67,22 @@
          (iter (dec elevens) (inc ones)))))
     (iter aces 0))
   (sum-cards hand 0 0))
-; 10 A A
 
 ; part 2
+(define (stop-at-17 my-hand upcard)
+  (< (best-total my-hand) 17))
+
+; part 3
 (define (play-n strategy n)
   (if (= n 0)
    0
    (+ (twenty-one strategy) (play-n strategy (dec n)))))
 
-; part 3
-(define (stop-at-17 my-hand upcard)
-  (< (best-total my-hand) 17))
-
 ; part 4
 (define (dealer-sensitive my-hand upcard)
-  (cond ((and (member? upcard '(a A 7 8 9 10 J Q K)) (< (best-total my-hand) 17)) #t) ((and (member? upcard '(2 3 4 5 6)) (< (best-total my-hand) 12)) #t) (else #f)))
+  (cond ((and (member? upcard '(a A 7 8 9 10 J Q K)) (< (best-total my-hand) 17)) #t)
+        ((and (member? upcard '(2 3 4 5 6)) (< (best-total my-hand) 12)) #t)
+        (else #f)))
 
 ; part 5
 (define (stop-at n)
@@ -93,9 +93,28 @@
   (if (member? 'H (every last my-hand))
     ((stop-at 19) my-hand card)
     ((stop-at 17) my-hand card)))
-    
-(play-n valentine 10)
-(play-n dealer-sensitive 4)
-(play-n (stop-at 17) 4)
-(play-n (stop-at 19) 4)
-(play-n stop-at-17 4)
+
+; part 7
+(define (suit-strategy suit strategy alternative)
+  (lambda (my-hand card) (if (member? suit (every last my-hand))
+                          (strategy my-hand card)
+                          (alternative my-hand card))))
+ 
+(define valentine-strat (suit-strategy 'H (stop-at 19) (stop-at 17)))
+
+; part 8
+(define (majority strat1 strat2 strat3)
+  (lambda (my-hand card)
+    (let ((outcome1 (strat1 my-hand card))
+          (outcome2 (strat2 my-hand card))
+          (outcome3 (strat3 my-hand card)))
+         (cond ((and outcome1 outcome2) #t)
+               ((and outcome1 outcome3) #t)
+               ((and outcome2 outcome3) #t)
+               (else #f)))))
+;(play-n (majority stop-at-17 dealer-sensitive valentine) 10)
+
+; part 9
+(define (reckless strategy)
+  (lambda (my-hand card)
+    (and (not (empty? my-hand)) (strategy (butlast my-hand) card))))
